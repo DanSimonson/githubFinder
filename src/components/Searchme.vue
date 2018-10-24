@@ -14,7 +14,10 @@
       <span v-if="showMe.blog"><a v-bind:href="showMe.blog">Go to website</a></span>
       <br>
       <span v-if="showMe.html_url"><a v-bind:href="showMe.html_url">Go to profile</a></span>
-
+    </div>
+    <div v-for="(repo,index) in showRepos" :key="repo.id">
+      {{repo.name}}
+      {{repo.html_url}}
     </div>
   </div>
 </template>
@@ -32,7 +35,25 @@
       }
     },
     methods: {
-      searchGitHub(username) {
+
+      chainPromises(username) {
+        axios.get('https://api.github.com/users/' + username)
+          .then((response) => {
+            console.log('Response', response);
+            this.showMe = response.data
+            return axios.get('https://api.github.com/search/repositories?q=user:' + 'DanSimonson' + '+sort:updated-desc')
+            //return axios.get('https://api.github.com/search/repositories?q=user:DanSimonson+sort:updated-desc')
+            //return axios.get('https://api.github.com/users/' + username + '/repos'); // using response.data
+          })
+          .then((response) => {
+            console.log('Response', response.data.items);
+            this.showRepos = response.data.items
+            //return axios.get('https://api.github.com/search/repositories?q=user:DanSimonson+sort:author-date-asc')
+            //https://api.github.com/search/repositories?q=user:km-poonacha+sort:author-date-asc
+          });
+
+      }
+      /*searchGitHub(username) {
         //fetch('https://github.com/DanSimonson/')
         // Make a request for a user with a given ID
         axios.get('https://api.github.com/users/' + username)
@@ -46,19 +67,6 @@
             // handle error
             console.log(error);
           })
-      },
-      chainPromises(username) {
-        axios.get('https://api.github.com/users/' + username)
-          .then((response) => {
-            console.log('Response', response);
-            this.showMe = response.data
-            return axios.get('https://api.github.com/users/' + username + '/repos'); // using response.data
-          })
-          .then((response) => {
-            console.log('Response', response);
-            this.showRepos = response.data
-          });
-
       },
       getRepos(username) {
         //fetch('https://github.com/DanSimonson/')
@@ -76,7 +84,7 @@
             this.error = error;
           })
 
-      }
+      }*/
     }
   }
 </script>
