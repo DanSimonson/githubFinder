@@ -738,7 +738,7 @@
 
     .repos {
       position: absolute;
-      top: 70%;
+      top: 65%;
       Left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -748,7 +748,7 @@
     margin: 0 auto;
     text-align: center;*/
       position: fixed;
-      bottom: 28%;
+      bottom: 34%;
       left: 48%;
       transform: translate(-50%, -50%);
     }
