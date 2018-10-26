@@ -1,9 +1,10 @@
 <template>
+  <!--background: url(https://res.cloudinary.com/dmglopmul/image/upload/v1540531394/projectPhotos/githubfinder/github.jpg);background-repeat: no-repeat;background-size: cover;-->
   <div class="searchme" style="display: flex;justify-content: center;margin: 10px;">
     <div class='wrap'>
       <form class="
     myForm" v-on:submit.prevent="chainPromises(username)">
-        <label class="label purpleLabel" for="fname"><i class="fab fa-github-square fa-lg"></i>Username: </label>
+        <label class="label purpleLabel" for="fname"><i class="fab fa-github-square fa-3x"></i>Username: </label>
         <input class="myInput" type="text" placeholder="DanSimonson" v-model="username" />
       </form>
     </div>
@@ -31,6 +32,8 @@
         <v-layout align-items-stretch row wrap>
           <v-flex pl-4 sm12 lg3 v-for="(repo,index) in showRepos" :key="repo.id" v-if="index <= limit">
             <v-card align-content-end color="#9068be" class="white--text" height="100%">
+              <v-img src="https://res.cloudinary.com/dmglopmul/image/upload/v1540531394/projectPhotos/githubfinder/github.jpg"
+                aspect-ratio="2.75"></v-img>
               <v-card-title primary-title>
                 <div class="headline">Repository Name: {{ repo.name }}</div>
               </v-card-title>
@@ -59,7 +62,7 @@
       <p>{{repo.html_url}} </p>-->
     <!--</div>-->
   </div>
-  </div>
+
 </template>
 
 <script>
@@ -91,6 +94,8 @@
             //return axios.get('https://api.github.com/search/repositories?q=user:DanSimonson+sort:author-date-asc')
             //https://api.github.com/search/repositories?q=user:km-poonacha+sort:author-date-asc
           });
+        //clear the input box after submit
+        //this.username = '';
 
       }
     }
@@ -98,6 +103,15 @@
 </script>
 
 <style scoped>
+  /*style="background: url(https://res.cloudinary.com/dmglopmul/image/upload/v1540529604/projectPhotos/githubfinder/github.jpg)
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  .headline {
+    font-size: 1.2em !important;
+  }
+
   .label {
     color: #fdfdfd;
     padding: 2px;
@@ -140,14 +154,19 @@
     margin-top: 5px;
   }
 
-  .searchMe {
+  div.searchMe {
     position: relative;
+    background: url(https://res.cloudinary.com/dmglopmul/image/upload/v1540529604/projectPhotos/githubfinder/github.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
   }
 
   form.myForm {
-    /*border: 2px solid red;*/
-    background: #e1e8f0;
+    /*border: 2px solid red;
+    background: #e1e8f0;*/
     padding: 3px;
     width: 500px;
     text-align: center;
@@ -181,12 +200,13 @@
 
   .searchMe {
     position: relative;
+    height: 100vh;
 
   }
 
   .box {
-    /*border: 6px solid gold;*/
-    background: #e1e8f0;
+    /*border: 6px solid gold;
+    background: #e1e8f0;*/
     /*position: absolute;
     top: 50%;
     Left: 50%;
@@ -279,6 +299,7 @@
       width: 320px;
       display: flex;
       justify-content: center;
+      margin-top: 15px;
     }
 
     .box .content {
@@ -336,7 +357,7 @@
       width: 320px;
       display: flex;
       justify-content: center;
-      margin-top: 10px
+      margin-top: 20px
     }
 
     .box .content {
@@ -372,6 +393,7 @@
       padding: 20px;*/
     }
   }
+
 
   @media only screen and (min-width: 1024px) {
     form.myForm {
@@ -395,7 +417,7 @@
       width: 320px;
       display: flex;
       justify-content: center;
-      margin-top: 10px
+      margin-top: 30px
     }
 
     .box .content {
@@ -415,7 +437,7 @@
 
     .repos {
       position: absolute;
-      top: 77%;
+      top: 83%;
       Left: 50%;
       transform: translate(-50%, -50%);
       margin-top: 10px;
@@ -423,7 +445,7 @@
 
     div.container.grid-list-xl {
 
-      margin-top: 350px;
+      margin-top: 380px;
       margin-right: 38px;
       /*position: absolute;
       top: 10%;
@@ -432,6 +454,68 @@
       padding: 20px;*/
     }
   }
+
+  @media only screen and (min-width: 1440px) {
+    form.myForm {
+
+      width: 320px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box {
+      position: absolute;
+      top: 48%;
+      Left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2%;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 320px;
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+
+    }
+
+    .box .content {
+      padding-left: 20px;
+      border: 1px solid #6ed3cf;
+    }
+
+    .box .imgBx {
+      width: 120px;
+      flex: 0 0 120px;
+    }
+
+    .box .content {
+      padding-left: 20px;
+      border: 1px solid #6ed3cf;
+    }
+
+    .repos {
+      position: absolute;
+      top: 90%;
+      Left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 15px;
+    }
+
+    div.container.grid-list-xl {
+
+      margin-top: 415px;
+      margin-right: 38px;
+      /*position: absolute;
+      top: 10%;
+      Left: 50%;
+      transform: translate(-50%, -10%);
+      padding: 20px;*/
+    }
+  }
+
 
   @media only screen and (min-width: 1600px) {
     form.myForm {
@@ -454,7 +538,7 @@
       width: 320px;
       display: flex;
       justify-content: center;
-      margin-top: 10px
+      margin-top: 40px
     }
 
     .box .content {
@@ -474,14 +558,14 @@
 
     .repos {
       position: absolute;
-      top: 59%;
+      top: 63%;
       Left: 50%;
-      transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%);
+
     }
 
     div.container.grid-list-xl {
-
-      margin-top: 410px;
+      margin-top: 455px;
       margin-right: 38px;
       /*position: absolute;
       top: 10%;
@@ -504,7 +588,7 @@
 
     .box {
       position: absolute;
-      top: 50%;
+      top: 58%;
       Left: 50%;
       transform: translate(-50%, -50%);
       padding: 2%;
@@ -540,7 +624,7 @@
 
     div.container.grid-list-xl {
 
-      margin-top: 450px;
+      margin-top: 460px;
       margin-right: 38px;
       /*position: absolute;
       top: 10%;
