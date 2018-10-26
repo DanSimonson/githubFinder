@@ -327,13 +327,14 @@
 
     div.container.grid-list-xl {
 
-      margin-top: 370px;
+      margin-top: 400px;
       margin-right: 38px;
-      /*position: absolute;
-      top: 10%;
+      position: absolute;
+      top: 45%;
       Left: 50%;
       transform: translate(-50%, -10%);
-      padding: 20px;*/
+      padding: 20px;
+
     }
   }
 
@@ -388,11 +389,11 @@
 
       margin-top: 390px;
       margin-right: 38px;
-      /*position: absolute;
-      top: 10%;
+      position: absolute;
+      top: 70%;
       Left: 50%;
       transform: translate(-50%, -10%);
-      padding: 20px;*/
+      padding: 20px;
     }
   }
 
@@ -449,11 +450,11 @@
 
       margin-top: 400px;
       margin-right: 38px;
-      /*position: absolute;
-      top: 10%;
+      position: absolute;
+      top: 75%;
       Left: 50%;
       transform: translate(-50%, -10%);
-      padding: 20px;*/
+      padding: 20px;
     }
   }
 
@@ -500,7 +501,7 @@
 
     .repos {
       position: absolute;
-      top: 92%;
+      top: 98%;
       Left: 50%;
       transform: translate(-50%, -50%);
       margin-top: 15px;
@@ -510,11 +511,11 @@
 
       margin-top: 422px;
       margin-right: 38px;
-      /*position: absolute;
-      top: 10%;
+      position: absolute;
+      top: 40%;
       Left: 50%;
       transform: translate(-50%, -10%);
-      padding: 20px;*/
+      padding: 20px;
     }
   }
 
@@ -560,7 +561,7 @@
 
     .repos {
       position: absolute;
-      top: 67%;
+      top: 90%;
       Left: 50%;
       transform: translate(-50%, -50%);
 
@@ -569,11 +570,11 @@
     div.container.grid-list-xl {
       margin-top: 468px;
       margin-right: 38px;
-      /*position: absolute;
-      top: 10%;
+      position: absolute;
+      top: 45%;
       Left: 50%;
       transform: translate(-50%, -10%);
-      padding: 20px;*/
+      padding: 20px;
     }
   }
 
