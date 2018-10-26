@@ -3,9 +3,10 @@
   <div class="searchme" style="display: flex;justify-content: center;margin: 10px;">
     <div class='wrap'>
       <form class="
-    myForm" v-on:submit.prevent="chainPromises(username)">
+    myForm">
         <label class="label purpleLabel" for="fname"><i class="fab fa-github-square fa-3x"></i>Username: </label>
         <input class="myInput" type="text" placeholder="DanSimonson" v-model="username" />
+        <input type="submit" value="Submit" class="button" v-on:click="chainPromises(username)">
       </form>
     </div>
 
@@ -290,7 +291,7 @@
 
     .box {
       position: absolute;
-      top: 42%;
+      top: 45%;
       Left: 50%;
       transform: translate(-50%, -50%);
       padding: 2%;
@@ -299,7 +300,7 @@
       width: 320px;
       display: flex;
       justify-content: center;
-      margin-top: 15px;
+      margin-top: 25px;
     }
 
     .box .content {
@@ -319,14 +320,14 @@
 
     .repos {
       position: absolute;
-      top: 77%;
+      top: 82%;
       Left: 50%;
       transform: translate(-50%, -50%)
     }
 
     div.container.grid-list-xl {
 
-      margin-top: 350px;
+      margin-top: 370px;
       margin-right: 38px;
       /*position: absolute;
       top: 10%;
@@ -348,67 +349,7 @@
 
     .box {
       position: absolute;
-      top: 42%;
-      Left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 2%;
-      box-sizing: border-box;
-      border-radius: 4px;
-      width: 320px;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px
-    }
-
-    .box .content {
-      padding-left: 20px;
-      border: 1px solid #6ed3cf;
-    }
-
-    .box .imgBx {
-      width: 120px;
-      flex: 0 0 120px;
-    }
-
-    .box .content {
-      padding-left: 20px;
-      border: 1px solid #6ed3cf;
-    }
-
-    .repos {
-      position: absolute;
-      top: 77%;
-      Left: 50%;
-      transform: translate(-50%, -50%)
-    }
-
-    div.container.grid-list-xl {
-
-      margin-top: 350px;
-      margin-right: 38px;
-      /*position: absolute;
-      top: 10%;
-      Left: 50%;
-      transform: translate(-50%, -10%);
-      padding: 20px;*/
-    }
-  }
-
-
-  @media only screen and (min-width: 1024px) {
-    form.myForm {
-
-      width: 320px;
-      text-align: center;
-      position: absolute;
-      left: 50%;
-      top: 10%;
-      transform: translate(-50%, -50%);
-    }
-
-    .box {
-      position: absolute;
-      top: 42%;
+      top: 46%;
       Left: 50%;
       transform: translate(-50%, -50%);
       padding: 2%;
@@ -437,7 +378,68 @@
 
     .repos {
       position: absolute;
-      top: 83%;
+      top: 85%;
+      Left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 5px;
+    }
+
+    div.container.grid-list-xl {
+
+      margin-top: 390px;
+      margin-right: 38px;
+      /*position: absolute;
+      top: 10%;
+      Left: 50%;
+      transform: translate(-50%, -10%);
+      padding: 20px;*/
+    }
+  }
+
+
+  @media only screen and (min-width: 1024px) {
+    form.myForm {
+
+      width: 320px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box {
+      position: absolute;
+      top: 45%;
+      Left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2%;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 320px;
+      display: flex;
+      justify-content: center;
+      margin-top: 38px
+    }
+
+    .box .content {
+      padding-left: 20px;
+      border: 1px solid #6ed3cf;
+    }
+
+    .box .imgBx {
+      width: 120px;
+      flex: 0 0 120px;
+    }
+
+    .box .content {
+      padding-left: 20px;
+      border: 1px solid #6ed3cf;
+    }
+
+    .repos {
+      position: absolute;
+      top: 88%;
       Left: 50%;
       transform: translate(-50%, -50%);
       margin-top: 10px;
@@ -445,7 +447,7 @@
 
     div.container.grid-list-xl {
 
-      margin-top: 380px;
+      margin-top: 400px;
       margin-right: 38px;
       /*position: absolute;
       top: 10%;
@@ -468,7 +470,7 @@
 
     .box {
       position: absolute;
-      top: 48%;
+      top: 52%;
       Left: 50%;
       transform: translate(-50%, -50%);
       padding: 2%;
@@ -498,7 +500,7 @@
 
     .repos {
       position: absolute;
-      top: 90%;
+      top: 92%;
       Left: 50%;
       transform: translate(-50%, -50%);
       margin-top: 15px;
@@ -506,7 +508,7 @@
 
     div.container.grid-list-xl {
 
-      margin-top: 415px;
+      margin-top: 422px;
       margin-right: 38px;
       /*position: absolute;
       top: 10%;
@@ -529,7 +531,7 @@
 
     .box {
       position: absolute;
-      top: 33%;
+      top: 36%;
       Left: 50%;
       transform: translate(-50%, -50%);
       padding: 2%;
@@ -558,14 +560,14 @@
 
     .repos {
       position: absolute;
-      top: 63%;
+      top: 67%;
       Left: 50%;
       transform: translate(-50%, -50%);
 
     }
 
     div.container.grid-list-xl {
-      margin-top: 455px;
+      margin-top: 468px;
       margin-right: 38px;
       /*position: absolute;
       top: 10%;
