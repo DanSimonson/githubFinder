@@ -23,12 +23,11 @@
         <div class="label" v-if="showMe.location">Living in: {{ showMe.location }}</div>
         <div class="label" v-if="showMe.followers">Followers: {{ showMe.followers }}</div>
         <div class="label" v-if="showMe.following">Following: {{ showMe.following }}</div>
-
       </div>
     </div>
 
-    <span class="repos label blueLabel" v-if="showMe">Latest Repositories</span>
     <div class='wrapContainer' style="display:flex; justify-content:center;">
+      <span class="repos label blueLabel" v-if="showMe">Latest Repositories</span>
       <v-container grid-list-xl>
         <v-layout align-items-stretch row wrap>
           <v-flex pl-4 sm12 lg3 v-for="(repo,index) in showRepos" :key="repo.id" v-if="index <= limit">
