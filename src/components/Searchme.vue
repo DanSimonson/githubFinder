@@ -78,13 +78,13 @@
         <div class="label" v-if="showMe.following">Following: {{ showMe.following }}</div>
       </div>
     </div>-->
-
     <!--<div class='wrapContainer' style="display:flex; justify-content:center; background: red;background-size:cover;">
       <span class="repos label blueLabel" v-if="showMe">Latest Repositories</span>-->
+
     <v-container grid-list-xl>
       <v-layout align-items-stretch row wrap>
         <v-flex pl-4 sm12 lg3 v-for="(repo,index) in showRepos" :key="repo.id" v-if="index <= limit">
-          <v-card align-content-end color="#9068be" class="white--text" height="100%">
+          <v-card ripple align-content-end color="#9068be" class="white--text" height="100%">
             <v-img src="https://res.cloudinary.com/dmglopmul/image/upload/v1540531394/projectPhotos/githubfinder/github.jpg"
               aspect-ratio="2.75"></v-img>
             <v-card-title primary-title>
@@ -103,9 +103,6 @@
     </v-container>
   </div>
   </div>
-  <!--<div v-if="showMe" class="arrowDown" v-bind:style="{ opacity: activeOpacity }"></div>
-  </div>
-  </div>-->
 </template>
 
 <script>
@@ -178,22 +175,24 @@
     display: flex;
     justify-content: center;
     background: #6ed3cf;
+    border-radius: 12px;
     /*#e1e8f0;*/
   }
 
-  form.myForm {
+  /*form.myForm {
     border: 5px solid black;
     background: #e1e8f0;
     padding: 20px;
     width: 500px;
+
     /*text-align: center;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    font-size: 1.2em;*/
-  }
+    font-size: 1.2em;
+  }*/
 
   input[type=text],
   select {
@@ -265,12 +264,12 @@
     color: #9068be;
     /*#fdfdfd;*/
     background: #6ed3cf;
-    /* ButtonText;*/
-    /*display: inline-block;*/
+    /* ButtonText;
+    /*display: inline-block;
     padding: 5px 8px;
     margin-top: 5px;
     transition: .3s;
-    font-size: 1.5em;
+    font-size: 1.5em;*/
 
   }
 
@@ -306,6 +305,7 @@
     bottom: 10%;
     left: 48%;
     transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   .arrowDown::after {
@@ -325,8 +325,6 @@
     -webkit-animation: 3s arrow infinite ease;
     animation: 3s arrow infinite ease;
   }
-
-  .arrowDown[data-v-5a792970] {}
 
   @-webkit-keyframes arrow {
 
@@ -356,7 +354,7 @@
     font-size: 1.2em !important;
   }
 
-  */
+
   /*div.searchMe {
     position: relative;
     background: url(https://res.cloudinary.com/dmglopmul/image/upload/v1540529604/projectPhotos/githubfinder/github.jpg) no-repeat center center fixed;
@@ -382,9 +380,11 @@
 
   /*.box .imgbx*/
   .box {
-    background: #e1e8f0;
+    background: #6ed3cf;
+    /*#e1e8f0;*/
     margin-right: 10px;
     padding: 5px;
+    border-radius: 12px;
     /*border: 5px solid brown;*/
   }
 
@@ -413,10 +413,12 @@
 
   .contentBox {
     text-align: inherit;
-    background: #e1e8f0;
+    /*background: #e1e8f0;*/
     /*background: #6ed3cf;*/
     color: #9068be;
+    background: #9068be;
     padding: 5px;
+    border-radius: 12px;
     /*border: 5px solid green;*/
   }
 
@@ -453,6 +455,7 @@
 
   .container.grid-list-xl {
     background-color: #6ed3cf;
+    border-radius: 12px;
   }
 
 
